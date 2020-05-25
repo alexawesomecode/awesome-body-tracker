@@ -16,7 +16,7 @@ const Login = () => {
             <h1> awesome body tracker app </h1>
             <h2>Enter your email</h2>
             <input type="text"/>
-            <button onClick={handleClick} className="btn btn-outline-light" href="/progress"> Login </button>
+            <button className="btn btn-outline-light"> <a href="/track">Login </a></button>
         </div>
 
     )

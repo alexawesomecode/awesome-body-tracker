@@ -2,13 +2,25 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './components/App';
-import * as serviceWorker from './serviceWorker';
+import reducer from './reducers/index'
+import { createStore } from 'redux';
+import { Provider } from 'react-redux';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
+const initialState = [
+
+  {name: 'biceps', measure: 'cm', target:  '20cm', progress: {day1: '12cm', day2: '22cm'}, icon: ''},
+  {name: 'head', measure: 'cm', target:  '208cm', progress: {day1: '124cm', day2: '224cm'}, icon: ''},
+  {name: 'legs', measure: 'cm', target:  '220cm', progress: {day1: '12cm', day2: '2882cm'}, icon: ''}
+
+]
+const store = createStore(reducer, initialState)
 ReactDOM.render(
   <React.StrictMode>
+    <Provider store={store}>
     <App />
+    </Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );
@@ -16,4 +28,4 @@ ReactDOM.render(
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
 // Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+
