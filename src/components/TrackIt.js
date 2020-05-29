@@ -25,7 +25,7 @@ const TrackIt = props => {
       </div>
       <div>
         {' '}
-        <h3>Last week</h3>
+        
         {' '}
       </div>
     </div>

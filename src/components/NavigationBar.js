@@ -36,6 +36,7 @@ const NavigationBar = () => (
       <div>
         {' '}
         <a>...</a>
+        <a>more</a>
         {' '}
       </div>
     </div>

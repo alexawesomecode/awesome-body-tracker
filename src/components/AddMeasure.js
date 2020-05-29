@@ -1,12 +1,10 @@
 import React from 'react';
+import TopNav from './TopNav'
 
 
 const AddMeasure = () => (
   <div>
-    <nav className="navbar fixed-top bg-primary justify-content-center">
-
-      measure
-    </nav>
+    <TopNav>Add Measure</TopNav>
     <div clasName="container-fluid">
 
       <h2>add measure for biceps</h2>

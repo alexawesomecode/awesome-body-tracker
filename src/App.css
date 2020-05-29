@@ -1,3 +1,8 @@
+a {
+
+  text-decoration: none;
+  
+}
 .App {
   text-align: center;
 }
@@ -5,6 +10,79 @@
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+}
+
+.item-name {
+
+  
+}
+
+.item-target {
+  font-size: 20px;
+  color: black;
+  
+
+}
+
+.track-date {
+  padding:10px;
+  font-size: 18px;
+  font-weight: bold;
+
+}
+.track-stats {
+
+  height: 123px;
+  
+}
+
+.top-nav-item {
+  color:white;
+  font-size:18px;
+  height: 34px;
+    padding: 3px;
+    font-size:21px;
+
+
+}
+.item-card {
+
+  justify-content: center;
+    align-items: center;
+}
+
+.item-icon {
+
+  font-size: 35px;
+    padding: 9px;
+}
+
+.item-information {
+  margin: 7px 5px 0px 7px;
+  color:gray !important;
+}
+
+.track-card-md {
+
+  font-weight: bold;
+  font-size:20px;
+}
+.card-created-at {
+
+      font-size: 18px;
+    font-weight: 500;
+
+}
+.card-icon {
+
+  text-align: start;
+  /* margin-left: 22px; */
+  padding-left: 7px;
+}
+
+.item-information a {
+  
+  color:gray !important;
 }
 #navigation-bar  svg {
 
