@@ -1,0 +1,1 @@
+export const SET_USER = (user) => ({type: 'SET_USER', username: user})

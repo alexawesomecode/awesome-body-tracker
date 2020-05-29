@@ -1,12 +1,23 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import { SET_USER } from '../actions/index'
+import { connect } from 'react-redux'
+const mapDispatchToProps = dispatch => {
+    
+    return {
 
+    addUser: user => dispatch(SET_USER)
 
-const Login = () => {
+}}
+
+const Login = (props    ) => {
+    const { addUser } = props;
 
     const handleClick = (e) => {
 
         const user = e.target.value
-        console.log(user)
+        return addUser(user)
+
 
     }
 
@@ -15,12 +26,17 @@ const Login = () => {
         <div className="w-50 h-50 m-auto d-flex flex-column p-3 bg-primary text-white">
             <h1> awesome body tracker app </h1>
             <h2>Enter your email</h2>
+            <form onSubmit={() => console.log('from submit')}>
             <input type="text"/>
-            <button className="btn btn-outline-light"> <a href="/track">Login </a></button>
+            <Link to="/track">
+            <input type="submit" className="btn btn-outline-light" />Login
+            
+            </Link>
+            </form>
         </div>
 
     )
 
 }
 
-export default Login;
+export default connect(null, mapDispatchToProps)(Login)
