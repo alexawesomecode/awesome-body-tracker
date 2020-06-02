@@ -4,7 +4,15 @@ a {
   
 }
 .App {
+  height: 100vh;
   text-align: center;
+  margin-bottom:120px;
+
+}
+
+body {
+
+  
 }
 
 .App-logo {
@@ -51,6 +59,18 @@ a {
     align-items: center;
 }
 
+.stats-circles {
+
+  display: flex;
+    justify-content: space-evenly;
+    margin: 10px 0;
+}
+.stats-circles > * {
+
+  height: 150px;
+    
+
+}
 .item-icon {
 
   font-size: 35px;
@@ -125,11 +145,24 @@ a {
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.cards-measurement a {
+
+  text-decoration:none !important;
+  color:none;
+}
+
+#pounds-lost svg {
+
+  height: 120px;
+}
+
+#pounds-to-lose svg {
+
+  height: 90px;
+}
+
+form > * {
+
+  padding:5px;
+  
 }

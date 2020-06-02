@@ -14,15 +14,16 @@ function App() {
 
     <div className="App">
       <Router>
+        <Route exact path="/" component={Login} />
         <Switch>
-          <Route path="/progress" component={Progress} />
-          <Route path="/trackit/:id" component={TrackIt} />
-          <Route path="/AddMeasure" component={AddMeasure} />
-          <Route path="/track" component={Track} />
-          <Route exact path="/" component={Login} />
+          <Route path="/auth/progress" component={Progress} />
+          <Route path="/auth/trackit/:id" component={TrackIt} />
+          <Route path="/auth/AddMeasure" component={AddMeasure} />
+          <Route path="/auth/track" component={Track} />
+
 
         </Switch>
-        <NavigationBar />
+        <Route path={['/auth']} component={NavigationBar} />
       </Router>
 
     </div>

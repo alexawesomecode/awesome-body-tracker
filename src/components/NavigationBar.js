@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCoffee } from '@fortawesome/free-solid-svg-icons';
+import { faCoffee, faAddressBook, faAsterisk } from '@fortawesome/free-solid-svg-icons';
 
 
 const NavigationBar = () => (
@@ -11,23 +11,23 @@ const NavigationBar = () => (
     <div className="navbar nav" id="navigation-bar">
       <div>
 
-        <Link to="/progress" className="d-flex flex-column  align-items-center">
-          <FontAwesomeIcon icon={faCoffee} />
+        <Link to="/auth/progress" className="d-flex flex-column  align-items-center">
+          <FontAwesomeIcon icon={faAddressBook} />
           <span> Progress</span>
         </Link>
 
       </div>
       <div>
 
-        <Link to="/track" className="d-flex flex-column  align-items-center">
-          <FontAwesomeIcon icon={faCoffee} />
+        <Link to="/auth/track" className="d-flex flex-column  align-items-center">
+          <FontAwesomeIcon icon={faAsterisk} />
           <span> Track It</span>
         </Link>
 
       </div>
       <div>
 
-        <Link to="/addmeasure" className="d-flex flex-column  align-items-center">
+        <Link to="/auth/addmeasure" className="d-flex flex-column  align-items-center">
           <FontAwesomeIcon icon={faCoffee} />
           <span> Add Measure</span>
         </Link>
@@ -35,8 +35,8 @@ const NavigationBar = () => (
       </div>
       <div>
         {' '}
-        <a>...</a>
-        <a>more</a>
+        <a href="/progress">more</a>
+
         {' '}
       </div>
     </div>

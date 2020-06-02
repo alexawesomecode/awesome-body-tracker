@@ -1,38 +1,45 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState } from 'react';
+import { withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { SET_USER } from '../actions/index';
+import { compose } from 'redux';
+import PropTypes from 'prop-types';
 
 const mapDispatchToProps = dispatch => ({
 
-  addUser: user => dispatch(SET_USER),
+  addUser: user => dispatch({ type: 'SET_USER', username: user }),
 
 });
 
 const Login = props => {
   const { addUser } = props;
-
+  const [user, setUser] = useState('');
   const handleClick = e => {
-    const user = e.target.value;
-    return addUser(user);
+    e.preventDefault();
+    addUser(user);
+    props.history.push('/auth/progress');
   };
 
+  const onChangeHandle = e => {
+    setUser(e.target.value);
+  };
   return (
 
-    <div className="w-50 h-50 m-auto d-flex flex-column p-3 bg-primary text-white">
+    <div className="w-100 h-100 d-flex flex-column justify-content-center p-3 bg-primary text-white">
       <h1> awesome body tracker app </h1>
       <h2>Enter your email</h2>
-      <form onSubmit={() => console.log('from submit')}>
-        <input type="text" />
-        <Link to="/track">
-          <input type="submit" className="btn btn-outline-light" />
-          Login
+      <form onSubmit={handleClick}>
+        <input type="text" onChange={onChangeHandle} />
 
-        </Link>
+        <input type="submit" className="btn m-3 btn-outline-light" value="Login" />
+
       </form>
     </div>
 
   );
 };
 
-export default connect(null, mapDispatchToProps)(Login);
+Login.propTypes = {
+
+  addUser: PropTypes.func.isRequired,
+};
+export default compose(withRouter, connect(null, mapDispatchToProps))(Login);

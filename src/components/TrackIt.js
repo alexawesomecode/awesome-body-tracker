@@ -1,18 +1,15 @@
 import React, { useState, useEffect } from 'react';
-import _ from 'lodash';
+import axios from 'axios';
+import PropTypes from 'prop-types';
 import TrackItCard from './TrackItCard';
-
 
 const TrackIt = props => {
   const [item, setItem] = useState({});
+
+  const { id } = props.match.params;
+
   useEffect(() => {
-    // call api -> get response
-    setItem({
-      items: {
-        25022020: '21cm', 23022020: '21cm', 22022020: '221cm', 22022020: '2cm',
-      },
-    });
-    console.log(item);
+    axios.get(`https://cors-anywhere.herokuapp.com/http://www.alejandro.work:3000/bodyparts/${id}/measures/`, { headers: { 'x-requested-with': 'alex', origin: '*' } }).then(r => setItem(r));
   }, []);
   return (
 
@@ -20,16 +17,36 @@ const TrackIt = props => {
 
       <div>
 
-        {item.hasOwnProperty('items') ? <TrackItCard item={item.items} /> : 'Loading'}
+        {Object.prototype.hasOwnProperty.call(item, 'data') ? <TrackItCard item={item.data} /> : 'Loading'}
 
       </div>
       <div>
         {' '}
-        
+
         {' '}
       </div>
     </div>
   );
 };
 
+TrackIt.defaultProps = {
+
+  match: {},
+  history: {},
+
+};
+
+TrackIt.propTypes = {
+
+  /* eslint-disable no-dupe-keys */
+  match: PropTypes.objectOf(PropTypes.object).isRequired,
+  match: PropTypes.shape({
+    params: PropTypes.objectOf(PropTypes.any).isRequired,
+  }),
+  history: PropTypes.objectOf(PropTypes.any).isRequired,
+  history: PropTypes.shape({
+    push: PropTypes.func.isRequired,
+  }),
+
+};
 export default TrackIt;
