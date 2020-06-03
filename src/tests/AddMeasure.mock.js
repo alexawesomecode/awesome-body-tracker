@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
-import axios from 'axios';
-import TopNav from './TopNav';
-import PropTypes from 'prop-types'
+
 const AddMeasure = props => {
   const [selection, setSelection] = useState({
     bodypart_id: 1, name: 'biceps', value: '', date: '',
@@ -34,17 +32,16 @@ const AddMeasure = props => {
         date: value,
       });
     }
+    return true;
   };
 
   const handleSubmit = e => {
     e.preventDefault();
-    axios.post('https://cors-anywhere.herokuapp.com/http://www.alejandro.work:3000/bodyparts/biceps/measures',
-      { headers: { 'x-requested-with': 'alex', origin: '*' }, measure: selection })
-      .then(() => props.history.push('/auth/track'));
+    return selection
   };
   return (
     <div>
-      <TopNav>Add Measure</TopNav>
+
       <h3 className="p-2">add a new measure </h3>
       <div className="d-flex justify-content-center my-1">
 
@@ -59,8 +56,10 @@ const AddMeasure = props => {
             <option>wrist</option>
 
           </select>
-          <h4>how much?:</h4>
-          <input type="text" placeholder="add measure like: 12cm" id="measure-input" onChange={handleChange} required />
+
+      <label htmlFor="testing"><h4>how much?:</h4></label>
+          <input type="text" aria-label="testing" placeholder="add measure like: 12cm" id="measure-input" onChange={handleChange} required />
+
           <h4>date:</h4>
           <input type="date" id="measure-date" onChange={handleChange} required />
           <input type="submit" className="btn btn-primary" value="Add" />
@@ -71,15 +70,5 @@ const AddMeasure = props => {
   );
 };
 
-AddMeasure.defaultProps = {
-
-    history: { }
-}
-AddMeasure.propTypes = {
-
-    history: PropTypes.objectOf(PropTypes.any).isRequired,
-    history: PropTypes.shape({
-        push: PropTypes.func.isRequired,
-    })
-}
 export default AddMeasure;
+
