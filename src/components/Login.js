@@ -38,8 +38,18 @@ const Login = props => {
   );
 };
 
+Login.defaultProps = {
+
+  history: {},
+};
 Login.propTypes = {
 
   addUser: PropTypes.func.isRequired,
+  history: PropTypes.objectOf(PropTypes.any).isRequired,
+  history: PropTypes.shape({
+    push: PropTypes.func.isRequired,
+  }),
 };
+
+
 export default compose(withRouter, connect(null, mapDispatchToProps))(Login);

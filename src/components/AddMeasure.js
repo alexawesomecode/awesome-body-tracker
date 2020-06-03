@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import PropTypes from 'prop-types';
 import TopNav from './TopNav';
 
 const AddMeasure = props => {
@@ -46,9 +47,9 @@ const AddMeasure = props => {
     <div>
       <TopNav>Add Measure</TopNav>
       <h3 className="p-2">add a new measure </h3>
-      <div className="d-flex justify-content-center my-0 ">
+      <div className="d-flex justify-content-center my-1">
 
-        <form onSubmit={handleSubmit} className="flex-column d-flex align-items-center ">
+        <form onSubmit={handleSubmit} className="flex-column d-flex align-items-center">
           <h4>type:</h4>
           <select id="measure-select" onChange={handleChange}>
             <option>biceps</option>
@@ -71,4 +72,15 @@ const AddMeasure = props => {
   );
 };
 
+AddMeasure.defaultProps = {
+
+  history: { },
+};
+AddMeasure.propTypes = {
+
+  history: PropTypes.objectOf(PropTypes.any).isRequired,
+  history: PropTypes.shape({
+    push: PropTypes.func.isRequired,
+  }),
+};
 export default AddMeasure;

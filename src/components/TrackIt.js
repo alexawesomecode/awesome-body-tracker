@@ -5,8 +5,11 @@ import TrackItCard from './TrackItCard';
 
 const TrackIt = props => {
   const [item, setItem] = useState({});
+  /* eslint-disable react/destructuring-assignment */
 
   const { id } = props.match.params;
+  /* eslint-enable react/destructuring-assignment */
+
 
   useEffect(() => {
     axios.get(`https://cors-anywhere.herokuapp.com/http://www.alejandro.work:3000/bodyparts/${id}/measures/`, { headers: { 'x-requested-with': 'alex', origin: '*' } }).then(r => setItem(r));
