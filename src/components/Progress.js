@@ -1,8 +1,16 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
-
-
+import axios from 'axios'
+import _ from 'lodash'
 const Progress = () => {
+
+  const [progress, setProgress] = useState('');
+  const [lastRecord, setLastRecord] = useState('');
+
+  useEffect(() => {
+    axios.get('https://cors-anywhere.herokuapp.com/http://www.alejandro.work:3000/bodyparts/1/progress', { headers: { 'x-requested-with': 'alex' } }).then(r => setProgress(r.data))
+    axios.get('https://cors-anywhere.herokuapp.com/http://www.alejandro.work:3000/bodyparts/2/measures', { headers: { 'x-requested-with': 'alex' } }).then(r => setLastRecord(r.data[0].value))  
+  }, []);
   const percentage = Math.random() * 100;
   return (
     <div className="container flex-column">
@@ -26,10 +34,10 @@ const Progress = () => {
         />
         <h4 className="p-2 m-3">
           {' '}
-          You have lost:
-          {Math.floor(percentage)}
+         
+          Biceps progression: {progress}%
           {' '}
-          pounds
+          
         </h4>
 
       </div>
@@ -51,7 +59,7 @@ const Progress = () => {
             backgroundColor: '#3e98c7',
           })}
         />
-        <h4>pounds to lose</h4>
+        <h4>last triceps record: {lastRecord}cm</h4>
       </div>
 
       <div className="container bg-light p-2 my-2" id="pounds-box">
