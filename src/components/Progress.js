@@ -2,14 +2,15 @@ import React, {useState, useEffect} from 'react';
 import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
 import axios from 'axios'
 import _ from 'lodash'
+import api from '../services/apiService'
 const Progress = () => {
 
   const [progress, setProgress] = useState('');
   const [lastRecord, setLastRecord] = useState('');
 
   useEffect(() => {
-    axios.get('https://cors-anywhere.herokuapp.com/http://www.alejandro.work:3000/bodyparts/1/progress', { headers: { 'x-requested-with': 'alex' } }).then(r => setProgress(r.data))
-    axios.get('https://cors-anywhere.herokuapp.com/http://www.alejandro.work:3000/bodyparts/triceps/measures', { headers: { 'x-requested-with': 'alex' } }).then(r => r.data).then(r => setLastRecord(r[0].value))  
+    api('/1/progress/', 'get').then(r => setProgress(r.data))
+    api('/triceps/measures/', 'get').then(r => r.data).then(r => setLastRecord(r[0].value))  
   }, []);
   const percentage = Math.random() * 100;
   return (
