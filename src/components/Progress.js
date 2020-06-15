@@ -9,7 +9,7 @@ const Progress = () => {
 
   useEffect(() => {
     axios.get('https://cors-anywhere.herokuapp.com/http://www.alejandro.work:3000/bodyparts/1/progress', { headers: { 'x-requested-with': 'alex' } }).then(r => setProgress(r.data))
-    axios.get('https://cors-anywhere.herokuapp.com/http://www.alejandro.work:3000/bodyparts/2/measures', { headers: { 'x-requested-with': 'alex' } }).then(r => setLastRecord(r.data[0].value))  
+    axios.get('https://cors-anywhere.herokuapp.com/http://www.alejandro.work:3000/bodyparts/triceps/measures', { headers: { 'x-requested-with': 'alex' } }).then(r => r.data).then(r => setLastRecord(r[0].value))  
   }, []);
   const percentage = Math.random() * 100;
   return (
@@ -87,7 +87,6 @@ const Progress = () => {
           <div className="flex-column col-xs-6">
             <p>Inches</p>
             <h3 className="text-danger">33cm</h3>
-
             <h4>cmor/cm</h4>
           </div>
         </div>

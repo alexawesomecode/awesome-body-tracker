@@ -151,3 +151,8 @@ body {
 form>* {
     padding: 5px;
 }
+
+.trackit  svg {
+
+  width: 94px;
+ }
