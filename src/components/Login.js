@@ -39,7 +39,7 @@ const Login = props => {
 };
 
 Login.defaultProps = {
-
+ /* eslint-disable no-dupe-keys */
   history: {},
 };
 Login.propTypes = {

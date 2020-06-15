@@ -13,7 +13,7 @@ const TrackIt = props => {
 
   useEffect(() => {
     axios.get(`https://cors-anywhere.herokuapp.com/http://www.alejandro.work:3000/bodyparts/${id}/measures/`, { headers: { 'x-requested-with': 'alex', origin: '*' } }).then(r => setItem(r));
-  }, []);
+  }, [id]);
   return (
 
     <div className="trackit d-flex flex-column">

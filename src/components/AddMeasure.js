@@ -72,7 +72,7 @@ const AddMeasure = props => {
 };
 
 AddMeasure.defaultProps = {
-
+ /* eslint-disable no-dupe-keys */
     history: { }
 }
 AddMeasure.propTypes = {
