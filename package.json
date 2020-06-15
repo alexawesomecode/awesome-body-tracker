@@ -47,6 +47,8 @@
   "devDependencies": {
     "@testing-library/react": "^9.5.0",
     "jest": "^26.0.1",
-    "json-loader": "^0.5.7"
+    "json-loader": "^0.5.7",
+    "stylelint": "^13.6.0",
+    "stylelint-config-recommended": "^3.0.0"
   }
 }
