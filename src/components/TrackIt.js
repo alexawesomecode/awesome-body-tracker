@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
 import PropTypes from 'prop-types';
 import TrackItCard from './TrackItCard';
+import api from '../services/apiService'
 
 const TrackIt = props => {
   const [item, setItem] = useState({});
@@ -9,10 +9,10 @@ const TrackIt = props => {
 
   const { id } = props.match.params;
   /* eslint-enable react/destructuring-assignment */
-
+  const apiParam = `/${id}/measures/`
 
   useEffect(() => {
-    axios.get(`https://cors-anywhere.herokuapp.com/http://www.alejandro.work:3000/bodyparts/${id}/measures/`, { headers: { 'x-requested-with': 'alex' } }).then(r => setItem(r));
+    api(apiParam, 'get').then(r => setItem(r));
   }, [id]);
   return (
     

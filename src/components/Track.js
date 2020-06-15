@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHatCowboy } from '@fortawesome/free-solid-svg-icons';
 import TopNav from './TopNav';
 import Stats from './Stats.js';
+import api from '../services/apiService'
 
 const axios = require('axios');
 
@@ -13,7 +14,7 @@ const Track = () => {
   const myDate = new Date();
 
   useEffect(() => {
-    axios.get('https://cors-anywhere.herokuapp.com/http://www.alejandro.work:3000/bodyparts/', { headers: { 'x-requested-with': 'alex' } }).then(r => setItems(r));
+    api('', 'get').then(r => setItems(r));
   }, []);
   return (
     <div>
