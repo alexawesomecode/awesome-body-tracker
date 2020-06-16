@@ -31,23 +31,23 @@ const Track = () => {
         <div className="cards-measurement d-flex justify-content-around flex-wrap">
 
           {Object.prototype.hasOwnProperty.call(items, 'data') ? items.data.map(item => (
-
-            <div key={item.name} className="shadow item-card w-40 my-3 d-flex justify-content-around">
-              <Link to={`/auth/trackit/${item.name}`}>
+            <Link to={`/auth/trackit/${item.name}` }>
+            <div key={item.name} className="shadow item-card w-30 my-3 d-flex flex-nowrap justify-content-around">
+              
                 <div className="item-icon">
                   <FontAwesomeIcon icon={faHatCowboy} />
                 </div>
                 <div className="item-information">
                   <span className="item-name">{item.name}</span>
 
-                  <p className="item-target">
-                    target:
+                  <p className="item-target px-2  mr-2">
+                    goal:
                     {item.target}
                   </p>
                 </div>
-              </Link>
+              
             </div>
-
+            </Link>
           )) : 'Loading'}
 
         </div>

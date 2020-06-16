@@ -42,7 +42,7 @@ const TrackItCard = props => {
             </div>
           </div>
           <span className="flex-grow-1 align-self-center track-card-md">
-            {item.value}
+            {item.value} cm
             {' '}
           </span>
         </div>
