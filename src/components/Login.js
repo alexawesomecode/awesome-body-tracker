@@ -24,7 +24,7 @@ const Login = props => {
   };
   return (
 
-    <main className="w-100 h-100 d-flex flex-column justify-content-center p-3 bg-primary text-white">
+    <main className="d-flex flex-column justify-content-center p-3 bg-primary text-white" style={{height: '100vh'}}>
       <h1> awesome body tracker app </h1>
       <h2>Enter your name</h2>
       <form onSubmit={handleClick}>

@@ -48,7 +48,7 @@ const AddMeasure = props => {
       <main>
         <TopNav>Add Measure</TopNav>
         <h3 className="p-2">add a new measure </h3>
-        <section className="d-flex justify-content-center my-1">
+        <section className="d-flex justify-contet-center my-1">
 
           <form onSubmit={handleSubmit} className="flex-column d-flex align-items-center">
             <h4>type:</h4>
