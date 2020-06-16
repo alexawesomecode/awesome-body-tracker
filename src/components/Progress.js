@@ -1,8 +1,12 @@
 import React, {useState, useEffect} from 'react';
 import api from '../services/apiService'
 import ProgressBar from './ProgressBar'
-const Progress = () => {
+import { connect } from 'react-redux'
 
+const mapStateToProps = (state) => ({username: state.username})
+
+const Progress = ({username}) => {
+  
   const [progress, setProgress] = useState('');
   const [lastRecord, setLastRecord] = useState('');
 
@@ -14,7 +18,7 @@ const Progress = () => {
   const percentage = Math.random() * 100;
   return (
     <div className="container flex-column">
-
+      <h2 className="p-2">Hello {username}</h2>
       <div className="justify-content-center  bg-light p-2 my-2" id="pounds-lost">
 
       <ProgressBar value={progress} path='orange' text='#f88' trail='blue' />
@@ -71,4 +75,4 @@ const Progress = () => {
     </div>
   );
 };
-export default Progress;
+export default connect(mapStateToProps, null)(Progress);

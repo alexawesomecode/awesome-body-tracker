@@ -6,7 +6,8 @@ const TrackItCard = props => {
 
 
   return (
-    item.map(item => (
+    <div className="container-fluid">
+    {item.map(item => (
       <div className="shadow my-3 p-2 card" key={`${item.created_at}"`}>
 
 
@@ -50,7 +51,8 @@ const TrackItCard = props => {
 
       </div>
     ))
-
+            }
+    </div>
   );
 };
 
