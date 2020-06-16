@@ -17,9 +17,9 @@ const Progress = ({username}) => {
   
   const percentage = Math.random() * 100;
   return (
-    <div className="container flex-column">
+    <main className="container flex-column">
       <h2 className="p-2">Hello {username}</h2>
-      <div className="justify-content-center  bg-light p-2 my-2" id="pounds-lost">
+      <section className="justify-content-center  bg-light p-2 my-2" id="pounds-lost">
 
       <ProgressBar value={progress} path='orange' text='#f88' trail='blue' />
 
@@ -32,16 +32,16 @@ const Progress = ({username}) => {
           
         </h4>
 
-      </div>
+      </section>
 
-      <div className="justify-content-center align-items-center d-flex bg-light p-2 my-2" id="pounds-to-lose">
+      <section className="justify-content-center align-items-center d-flex bg-light p-2 my-2" id="pounds-to-lose">
 
       <ProgressBar value={lastRecord} path='blue' text='black' trail='deeppink' />
 
         <h4 className="ml-3">last triceps record: {lastRecord}cm</h4>
-      </div>
+      </section>
 
-      <div className="container bg-light p-2 my-2" id="pounds-box">
+      <section className="container bg-light p-2 my-2" id="pounds-box">
         <div className="row justify-content-around my-2">
           <div className="flex-column col-xs-6">
             <p>Mass</p>
@@ -70,9 +70,9 @@ const Progress = ({username}) => {
           </div>
         </div>
 
-      </div>
+      </section>
 
-    </div>
+    </main>
   );
 };
 export default connect(mapStateToProps, null)(Progress);

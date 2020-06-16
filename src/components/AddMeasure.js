@@ -45,10 +45,10 @@ const AddMeasure = props => {
         .then(() => props.history.push('/auth/track'));
     };
     return (
-      <div>
+      <main>
         <TopNav>Add Measure</TopNav>
         <h3 className="p-2">add a new measure </h3>
-        <div className="d-flex justify-content-center my-1">
+        <section className="d-flex justify-content-center my-1">
 
           <form onSubmit={handleSubmit} className="flex-column d-flex align-items-center">
             <h4>type:</h4>
@@ -67,9 +67,9 @@ const AddMeasure = props => {
             <input type="date" id="measure-date" onChange={handleChange} required />
             <input type="submit" className="btn btn-primary" value="Add" />
           </form>
-        </div>
+        </section>
 
-      </div>
+      </main>
     );
   };
 

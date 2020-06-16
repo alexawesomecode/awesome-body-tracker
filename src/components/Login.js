@@ -24,16 +24,16 @@ const Login = props => {
   };
   return (
 
-    <div className="w-100 h-100 d-flex flex-column justify-content-center p-3 bg-primary text-white">
+    <main className="w-100 h-100 d-flex flex-column justify-content-center p-3 bg-primary text-white">
       <h1> awesome body tracker app </h1>
-      <h2>Enter your email</h2>
+      <h2>Enter your name</h2>
       <form onSubmit={handleClick}>
         <input type="text" onChange={onChangeHandle} />
 
         <input type="submit" className="btn m-3 btn-outline-light" value="Login" />
 
       </form>
-    </div>
+    </main>
 
   );
 };

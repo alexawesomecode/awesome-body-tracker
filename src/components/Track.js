@@ -17,9 +17,9 @@ const Track = () => {
     api('', 'get').then(r => setItems(r));
   }, []);
   return (
-    <div>
+    <main>
       <TopNav> Track It </TopNav>
-      <div className="container-fluid" id="container-wrapper">
+      <section className="container-fluid" id="container-wrapper">
 
         <div className="bg-light track-date">
           <span>{myDate.toDateString()}</span>
@@ -28,7 +28,7 @@ const Track = () => {
           {' '}
           <Stats />
         </div>
-        <div className="cards-measurement d-flex justify-content-around flex-wrap">
+        <article className="cards-measurement d-flex justify-content-around flex-wrap">
 
           {Object.prototype.hasOwnProperty.call(items, 'data') ? items.data.map(item => (
             <Link to={`/auth/trackit/${item.name}`}>
@@ -50,11 +50,11 @@ const Track = () => {
             </Link>
           )) : 'Loading'}
 
-        </div>
+        </article>
 
 
-      </div>
-    </div>
+      </section>
+    </main>
   );
 };
 

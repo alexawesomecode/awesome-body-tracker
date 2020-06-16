@@ -6,12 +6,12 @@ const TrackItCard = props => {
 
 
   return (
-    <div className="container-fluid">
+    <section className="container-fluid">
     {item.map(item => (
       <div className="shadow my-3 p-2 card" key={`${item.created_at}"`}>
 
 
-        <div className="d-flex justify-content-start">
+        <article className="d-flex justify-content-start">
           <span className="flex-grow-1 align-self-center card-icon">
 
 
@@ -46,13 +46,13 @@ const TrackItCard = props => {
             {item.value} cm
             {' '}
           </span>
-        </div>
+        </article>
 
 
       </div>
     ))
             }
-    </div>
+    </section>
   );
 };
 
