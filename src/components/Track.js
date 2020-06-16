@@ -6,9 +6,6 @@ import TopNav from './TopNav';
 import Stats from './Stats.js';
 import api from '../services/apiService'
 
-const axios = require('axios');
-
-
 const Track = () => {
   const [items, setItems] = useState({});
   const myDate = new Date();
@@ -28,11 +25,11 @@ const Track = () => {
           {' '}
           <Stats />
         </div>
-        <article className="cards-measurement d-flex justify-content-around flex-wrap">
+        <article className="cards-measurement d-flex flex-wrap justify-content-around">
 
           {Object.prototype.hasOwnProperty.call(items, 'data') ? items.data.map(item => (
             <Link to={`/auth/trackit/${item.name}`}>
-              <div key={item.name} className="shadow item-card w-30 my-3 d-flex flex-nowrap justify-content-around">
+              <div key={item.name} className="shadow item-card py-2 my-3 justify-content-around">
 
                 <div className="item-icon">
                   <FontAwesomeIcon icon={faHatCowboy} />

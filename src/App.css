@@ -51,6 +51,7 @@ body {
 }
 
 .item-card {
+    width: 140px;
     justify-content: center;
     align-items: center;
 }

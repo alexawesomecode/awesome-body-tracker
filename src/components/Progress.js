@@ -15,7 +15,7 @@ const Progress = ({username}) => {
     api('/triceps/measures/', 'get').then(r => r.data).then(r => setLastRecord(r[0].value))  
   }, []);
   
-  const percentage = Math.random() * 100;
+  
   return (
     <main className="container flex-column">
       <h2 className="p-2">Hello {username}</h2>

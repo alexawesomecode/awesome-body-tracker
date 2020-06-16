@@ -13,7 +13,7 @@ const TrackIt = props => {
 
   useEffect(() => {
     api(apiParam, 'get').then(r => setItem(r));
-  }, [id]);
+  }, [apiParam]);
   return (
     
 
