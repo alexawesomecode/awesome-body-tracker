@@ -1,8 +1,6 @@
 import React, {useState, useEffect} from 'react';
-import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
-import axios from 'axios'
-import _ from 'lodash'
 import api from '../services/apiService'
+import ProgressBar from './ProgressBar'
 const Progress = () => {
 
   const [progress, setProgress] = useState('');
@@ -12,28 +10,17 @@ const Progress = () => {
     api('/1/progress/', 'get').then(r => setProgress(r.data))
     api('/triceps/measures/', 'get').then(r => r.data).then(r => setLastRecord(r[0].value))  
   }, []);
+  
   const percentage = Math.random() * 100;
   return (
     <div className="container flex-column">
 
       <div className="justify-content-center  bg-light p-2 my-2" id="pounds-lost">
 
-        <CircularProgressbar
-          className="my-3"
-          value={Math.floor(Math.random() * 100)}
-          text={`${Math.floor(Math.random() * 100)}%`}
-          styles={buildStyles({
-            rotation: 0.25,
-            strokeLinecap: 'butt',
-            textSize: '7px',
-            pathTransitionDuration: 0.5,
-            pathColor: 'orange',
-            textColor: '#f88',
-            trailColor: 'blue',
-            backgroundColor: '#3e98c7',
-          })}
-        />
-        <h4 className="p-2 m-3">
+      <ProgressBar value={progress} path='orange' text='#f88' trail='blue' />
+
+    
+      <h4 className="p-2 m-3">
           {' '}
          
           Biceps progression: {progress}%
@@ -45,22 +32,9 @@ const Progress = () => {
 
       <div className="justify-content-center align-items-center d-flex bg-light p-2 my-2" id="pounds-to-lose">
 
-        <CircularProgressbar
-          className="p-2 m-3"
-          value={Math.floor(Math.random() * 100)}
-          text={`${Math.floor(Math.random() * 100)}`}
-          styles={buildStyles({
-            rotation: 0.25,
-            strokeLinecap: 'butt',
-            textSize: '12px',
-            pathTransitionDuration: 0.5,
-            pathColor: 'blue',
-            textColor: 'black',
-            trailColor: 'deeppink',
-            backgroundColor: '#3e98c7',
-          })}
-        />
-        <h4>last triceps record: {lastRecord}cm</h4>
+      <ProgressBar value={lastRecord} path='blue' text='black' trail='deeppink' />
+
+        <h4 className="ml-3">last triceps record: {lastRecord}cm</h4>
       </div>
 
       <div className="container bg-light p-2 my-2" id="pounds-box">
