@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHatCowboy } from '@fortawesome/free-solid-svg-icons';
 import TopNav from './TopNav';
 import Stats from './Stats.js';
-import api from '../services/apiService'
+import api from '../services/apiService';
 
 const Track = () => {
   const [items, setItems] = useState({});
@@ -28,7 +28,7 @@ const Track = () => {
         <article className="cards-measurement d-flex flex-wrap justify-content-around">
 
           {Object.prototype.hasOwnProperty.call(items, 'data') ? items.data.map(item => (
-            <Link to={`/auth/trackit/${item.name}`}>
+            <Link to={`/auth/trackit/${item.name}`} key={item.name}>
               <div key={item.name} className="shadow item-card py-2 my-3 justify-content-around">
 
                 <div className="item-icon">

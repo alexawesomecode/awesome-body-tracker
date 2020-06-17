@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
 
 const TrackItCard = props => {
@@ -7,53 +8,59 @@ const TrackItCard = props => {
 
   return (
     <section className="container-fluid">
-    {item.map(item => (
-      <div className="shadow my-3 p-2 card" key={`${item.created_at}"`}>
+      {item.map(item => (
+        <div className="shadow my-3 p-2 card" key={`${item.created_at}"`}>
 
 
-        <article className="d-flex justify-content-start">
-          <span className="flex-grow-1 align-self-center card-icon">
+          <article className="d-flex justify-content-start">
+            <span className="flex-grow-1 align-self-center card-icon">
 
 
-            <CircularProgressbar
-              value={Math.floor(Math.random() * 100)}
-              text={`${Math.floor(Math.random() * 100)}%`}
-              styles={buildStyles({
-                rotation: 0.25,
-                strokeLinecap: 'butt',
-                textSize: '8px',
-                pathTransitionDuration: 0.5,
-                pathColor: 'blue',
-                textColor: '#f88',
-                trailColor: '#d6d6d6',
-                backgroundColor: '#3e98c7',
-              })}
-            />
+              <CircularProgressbar
+                value={Math.floor(Math.random() * 100)}
+                text={`${Math.floor(Math.random() * 100)}%`}
+                styles={buildStyles({
+                  rotation: 0.25,
+                  strokeLinecap: 'butt',
+                  textSize: '8px',
+                  pathTransitionDuration: 0.5,
+                  pathColor: 'blue',
+                  textColor: '#f88',
+                  trailColor: '#d6d6d6',
+                  backgroundColor: '#3e98c7',
+                })}
+              />
 
-          </span>
-          <div className="flex-grow-1 d-flex justify-content-center">
+            </span>
+            <div className="flex-grow-1 d-flex justify-content-center">
 
-            <div className="align-self-center">
-              <span className="d-block card-created-at my-2">{new Date(item.created_at).toISOString().split('T')[0] }</span>
-              <span className="d-block">
-                body fat:
-                {Math.floor(Math.random() * 10)}
-                %
-              </span>
+              <div className="align-self-center">
+                <span className="d-block card-created-at my-2">{new Date(item.created_at).toISOString().split('T')[0] }</span>
+                <span className="d-block">
+                  body fat:
+                  {Math.floor(Math.random() * 10)}
+                  %
+                </span>
+              </div>
             </div>
-          </div>
-          <span className="flex-grow-1 align-self-center track-card-md">
-            {item.value} cm
-            {' '}
-          </span>
-        </article>
+            <span className="flex-grow-1 align-self-center track-card-md">
+              {item.value}
+              {' '}
+              cm
+              {' '}
+            </span>
+          </article>
 
 
-      </div>
-    ))
-            }
+        </div>
+      ))}
     </section>
   );
+};
+
+TrackItCard.propTypes = {
+
+  item: PropTypes.objectOf(PropTypes.any).isRequired,
 };
 
 export default TrackItCard;

@@ -1,44 +1,55 @@
-import React, {useState, useEffect} from 'react';
-import api from '../services/apiService'
-import ProgressBar from './ProgressBar'
-import { connect } from 'react-redux'
+import React, { useState, useEffect } from 'react';
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
+import api from '../services/apiService';
+import ProgressBar from './ProgressBar';
 
-const mapStateToProps = (state) => ({username: state.username})
 
-const Progress = ({username}) => {
-  
+const mapStateToProps = state => ({ username: state.username });
+
+const Progress = ({ username }) => {
   const [progress, setProgress] = useState('');
   const [lastRecord, setLastRecord] = useState('');
 
   useEffect(() => {
-    api('/1/progress/', 'get').then(r => setProgress(r.data))
-    api('/triceps/measures/', 'get').then(r => r.data).then(r => setLastRecord(r[0].value))  
+    api('/1/progress/', 'get').then(r => setProgress(r.data));
+    api('/triceps/measures/', 'get').then(r => r.data).then(r => setLastRecord(r[0].value));
   }, []);
-  
-  
+
+
   return (
     <main className="container flex-column">
-      <h2 className="p-2">Hello {username}</h2>
+      <h2 className="p-2">
+        Hello 
+        {username}
+      </h2>
       <section className="justify-content-center  bg-light p-2 my-2" id="pounds-lost">
 
-      <ProgressBar value={progress} path='orange' text='#f88' trail='blue' />
+        <ProgressBar value={`${progress}`} path="orange" text="#f88" trail="blue" />
 
-    
-      <h4 className="p-2 m-3">
+
+        <h4 className="p-2 m-3">
           {' '}
-         
-          Biceps progression: {progress}%
+
+          Biceps progression:
           {' '}
-          
+          {progress}
+          %
+          {' '}
+
         </h4>
 
       </section>
 
       <section className="justify-content-center align-items-center d-flex bg-light p-2 my-2" id="pounds-to-lose">
 
-      <ProgressBar value={lastRecord} path='blue' text='black' trail='deeppink' />
+        <ProgressBar value={`${lastRecord}`} path="blue" text="black" trail="deeppink" />
 
-        <h4 className="ml-3">last triceps record: {lastRecord}cm</h4>
+        <h4 className="ml-3">
+          last triceps record:
+          {lastRecord}
+          cm
+        </h4>
       </section>
 
       <section className="container bg-light p-2 my-2" id="pounds-box">
@@ -74,5 +85,18 @@ const Progress = ({username}) => {
 
     </main>
   );
+};
+
+
+Progress.defaultProps = {
+
+  username: ' Guest'
+}
+Progress.propTypes = {
+
+
+  username: PropTypes.string.isRequired,
+
+
 };
 export default connect(mapStateToProps, null)(Progress);
