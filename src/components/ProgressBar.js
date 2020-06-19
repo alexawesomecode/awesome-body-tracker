@@ -24,7 +24,7 @@ const ProgressBar = ({
         buildStyles({
             rotation: 0.25,
             strokeLinecap: 'butt',
-            textSize: '7px',
+            textSize: '9px',
             pathTransitionDuration: 0.5,
             pathColor: `${path}`,
             textColor: `${text}`,
