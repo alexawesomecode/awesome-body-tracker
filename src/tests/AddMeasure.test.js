@@ -1,16 +1,28 @@
 import '@testing-library/jest-dom';
 import React from 'react';
 import AddMeasure from './AddMeasure.mock'
-import { render, fireEvent, screen } from '@testing-library/react';
-import { create, act } from "react-test-renderer";
+import {
+    render,
+    fireEvent,
+    screen
+} from '@testing-library/react';
+import {
+    create,
+    act
+} from "react-test-renderer";
 
 test("render right form structure", () => {
 
     let labelElements;
     const Click = () => jest.fn();
-    const match = { params: {id: 'eurusd', path: 'details'}}
+    const match = {
+        params: {
+            id: 'eurusd',
+            path: 'details'
+        }
+    }
 
-    render(<AddMeasure />)
+    render( < AddMeasure / > )
 
 
     labelElements = screen.getAllByText('type:')
@@ -30,10 +42,11 @@ test("render right form structure", () => {
 
 
 test('when submitting receive mock true response', async () => {
-   const {getByText} = render( < AddMeasure / >)
+    const {
+        getByText
+    } = render( < AddMeasure / > )
     const result = fireEvent.click(getByText('Add'))
     expect(result).toBe(true)
 
 
 })
-
