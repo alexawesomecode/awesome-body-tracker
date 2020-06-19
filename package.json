@@ -12,6 +12,8 @@
     "bootstrap": "^4.5.0",
     "eslint": "^7.1.0",
     "eslint-config-airbnb": "^18.1.0",
+    "eslint-config-prettier": "^6.11.0",
+    "prettier": "^2.0.5",
     "prop-types": "^15.7.2",
     "react": "^16.13.1",
     "react-bootstrap": "^1.0.1",
