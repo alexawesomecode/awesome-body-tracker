@@ -37,9 +37,40 @@ You can see charts of your overall progress (by default it shows you biceps and 
 This app is built with React for the frontend and It hits an API endpoint built with Rails that you can find [here](www.github.com/alexawesomecode/awesome-body-api/)
 
 
+# Design
+
+## Login
+
+This the first screen you see when browsing. 
+
+![login](assets/login.jpg)
+
+## Progress
+
+Next you are moved to the 'Progress' page where you can see some stats about your progress.
+
+![progress](assets/progress.jpg)
+
+## Track it
+
+Here you are faced with all the items you are tracking. If you click on them you are redirected to the items details.
+
+![trackit](assets/trackit.jpg)
+
+## Track Card Detail
+
+This is a list of items with time details.
+
+![trackcard](assets/trackcard.jpg)
+
+## Add measure
+
+Here you can add measure. You choose the item and value.
+
+![measure](assets/measure.jpg)
 
 
-
+## 
 # Validations
 
 - ESLINT
