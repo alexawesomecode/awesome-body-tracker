@@ -3,3 +3,4 @@ src/tests/
 build/
 build/*
 node_modules/*
+*.css
