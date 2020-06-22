@@ -7,7 +7,7 @@
 [![Issues][issues-shield]][issues-url]
 [![MIT License][license-shield]][license-url]
 
-# Awesome Forex Signals
+# Awesome Body Tracker
 <br/>
 <p align="center">
   <a href="https://www.microverse.org/">
