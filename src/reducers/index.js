@@ -1,5 +1,5 @@
 const reducer = (state, action) => {
-  if (action.type === "SET_USER") {
+  if (action.type === 'SET_USER') {
     return {
       ...state,
       username: action.username,
