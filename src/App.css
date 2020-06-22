@@ -1,135 +1,136 @@
 #container-wrapper {
-  margin-bottom: 100px;
+    margin-bottom: 100px;
 }
 
 a {
-  text-decoration: none;
+    text-decoration: none;
 }
 
 .App {
-  text-align: center;
-  margin-bottom: 120px;
+    text-align: center;
+    margin-bottom: 120px;
 }
 
 .App-logo {
-  height: 40vmin;
-  pointer-events: none;
+    height: 40vmin;
+    pointer-events: none;
 }
 
 .item-target {
-  font-size: 20px;
-  color: black;
+    font-size: 20px;
+    color: black;
 }
 
 .track-date {
-  padding: 10px;
-  font-size: 18px;
-  font-weight: bold;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: bold;
 }
 
 .track-stats {
-  height: 123px;
+    height: 123px;
 }
 
 .top-nav-item {
-  color: white;
-  font-size: 18px;
-  height: 34px;
-  padding: 3px;
-  font-size: 21px;
+    color: white;
+    font-size: 18px;
+    height: 34px;
+    padding: 3px;
+    font-size: 21px;
 }
 
 .item-card {
-  width: 140px;
-  justify-content: center;
-  align-items: center;
+    width: 140px;
+    justify-content: center;
+    align-items: center;
 }
 
 .stats-circles {
-  display: flex;
-  justify-content: space-evenly;
-  margin: 10px 0;
+    display: flex;
+    justify-content: space-evenly;
+    margin: 10px 0;
 }
 
-.stats-circles > * {
-  height: 150px;
+.stats-circles>* {
+    height: 150px;
 }
 
 .item-icon {
-  font-size: 35px;
-  padding: 9px;
+    font-size: 35px;
+    padding: 9px;
 }
 
 .item-information {
-  margin: 7px 5px 0 7px;
-  color: gray !important;
+    margin: 7px 5px 0 7px;
+    color: gray !important;
 }
 
 .track-card-md {
-  font-weight: bold;
-  font-size: 20px;
+    font-weight: bold;
+    font-size: 20px;
 }
 
 .card-created-at {
-  font-size: 18px;
-  font-weight: 500;
+    font-size: 18px;
+    font-weight: 500;
 }
 
 .card-icon {
-  text-align: start;
+    text-align: start;
 
-  /* margin-left: 22px; */
-  padding-left: 7px;
+    /* margin-left: 22px; */
+    padding-left: 7px;
 }
 
 .item-information a {
-  color: gray !important;
+    color: gray !important;
 }
 
 #navigation-bar svg {
-  font-size: 30px;
+    font-size: 30px;
 }
 
 #navigation-bar {
-  height: 75px;
-  justify-content: space-around;
+    height: 75px;
+    justify-content: space-around;
 }
 
 #navigation-bar a {
-  color: gray !important;
-  text-decoration: none;
+    color: gray !important;
+    text-decoration: none;
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+    .App-logo {
+        animation: App-logo-spin infinite 20s linear;
+    }
 }
 
 .App-link {
-  color: #61dafb;
+    color: #61dafb;
 }
 
 .cards-measurement a {
-  text-decoration: none !important;
-  color: none;
+    text-decoration: none !important;
+    color: none;
 }
 
 #pounds-lost svg {
-  height: 120px;
+    height: 120px;
 }
 
 #pounds-to-lose svg {
-  height: 90px;
+    height: 90px;
 }
 
-form > * {
-  padding: 5px;
+form>* {
+    padding: 5px;
 }
 
 .trackit svg {
-  width: 94px;
+    width: 94px;
 }
+
 .trackit {
-  margin-bottom: 80px;
+    margin-bottom: 80px;
 }
