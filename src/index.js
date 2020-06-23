@@ -5,6 +5,7 @@ import { Provider } from 'react-redux';
 import './index.css';
 import App from './components/App';
 import reducer from './reducers/index';
+/* eslint-disable import/first */
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const initialState = [
