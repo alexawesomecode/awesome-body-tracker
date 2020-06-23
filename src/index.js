@@ -2,10 +2,10 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
-import App from './components/App';
-import reducer from './reducers/index';
 import './index.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import App from './components/App';
+import reducer from './reducers/index';
 
 const initialState = [
   {
