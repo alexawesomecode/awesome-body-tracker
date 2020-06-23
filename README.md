@@ -112,8 +112,6 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 <!-- ACKNOWLEDGEMENTS -->
 ## Acknowledgements
 * [Microverse](https://www.microverse.org/)
-* [The Odin Project](https://www.theodinproject.com/)
-* [FCSAPI](https://www.fcsapi.com/)
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
