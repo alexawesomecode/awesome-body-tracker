@@ -20,6 +20,7 @@
     "no-shadow": "off",
     "arrow-parens": ["error", "as-needed"],
     "camelcase": "off",
+   "jsx-a11y/href-no-hash": [0],
      "no-dupe-keys": "off",
 "no-restricted-syntax": "off"
   }

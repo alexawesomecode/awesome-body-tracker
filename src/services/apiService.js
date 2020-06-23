@@ -7,6 +7,7 @@ const api = (params, method) => {
       { headers: { 'x-requested-with': 'alex' } },
     );
   }
+  return 'success';
 };
 
 export default api;
