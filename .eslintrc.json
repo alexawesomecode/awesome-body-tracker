@@ -21,6 +21,7 @@
     "arrow-parens": ["error", "as-needed"],
     "camelcase": "off",
    "jsx-a11y/href-no-hash": [0],
-    "no-dupe-keys": "off"
+    "no-dupe-keys": "off",
+   "jsx-a11y/alt-text": [0]
   }
 }

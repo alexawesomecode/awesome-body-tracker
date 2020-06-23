@@ -1,11 +1,11 @@
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './index.css';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 import App from './components/App';
 import reducer from './reducers/index';
-import 'bootstrap/dist/css/bootstrap.min.css';
 
 const initialState = [
   {
