@@ -8,7 +8,7 @@
 [![MIT License][license-shield]][license-url]
 
 # Awesome Body Tracker
-<br/>
+<br />
 <p align="center">
   <a href="https://www.microverse.org/">
     <img src="assets/microverse.png" alt="Logo" width="80" height="80">
