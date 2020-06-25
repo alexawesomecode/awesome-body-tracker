@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHatCowboy } from '@fortawesome/free-solid-svg-icons';
 import TopNav from './TopNav';
-import Stats from './Stats.js';
+import Stats from './Stats';
 import api from '../services/apiService';
 
 const Track = () => {
