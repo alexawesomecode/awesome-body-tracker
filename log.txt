@@ -1,0 +1,8 @@
+
+> awesome-body-tracker@0.1.0 start /home/ubuntu/apps-dev/awesome-body-tracker
+> react-scripts start
+
+
+> awesome-body-tracker@0.1.0 start /home/ubuntu/apps-dev/awesome-body-tracker
+> react-scripts start
+
