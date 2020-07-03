@@ -69,8 +69,16 @@ Here you can add measure. You choose the item and value.
 
 ![measure](assets/measure.jpg)
 
+## Test
 
-## 
+After you run npm install, you can run 'npm run test'. This will run Jest on test files located at 'test' folder.
+
+## Future Roadmap
+
+- Create custom bodyparts and measures to keep track
+- Chart your progress
+- Export you data as JSON
+
 # Validations
 
 - ESLINT
