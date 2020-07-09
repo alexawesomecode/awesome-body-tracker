@@ -7,7 +7,6 @@
 [![Issues][issues-shield]][issues-url]
 [![MIT License][license-shield]][license-url]
 
-# Awesome Body Tracker
 <br/>
 <p align="center">
   <a href="https://www.microverse.org/">
@@ -15,22 +14,24 @@
   </a>
 
   <h3 align="center">
-    A Capstone project from the  Microverse React-Redux Curriculum
+	Awesome Body Tracker
   </h3>
 
   <h3 align="center">
 	 Live Version link - http://www.alejandro.work:3001
   </h3>
 
- 
 
-  </p>
 </p>
 
-## Project 'Awesome Body Tracker'
+## Project
 
 
-This app allows you to keep a daily log of different body part measures. So you can keep a log and track every item to hit your target.
+This an app where you can log different body part measures, how much your body is growing or shrinking, in centimeters.
+
+This is useful if  you are working out and need to keep track of your chest muscle measure, or if you want to lose weight and want to track your weight.
+
+ With this app you can keep a log and track every item and see the progress towards your target.
 
 You can see charts of your overall progress (by default it shows you biceps and triceps on the Progress tab) and also a detailed view of every record when you go to the Bodypart section.
 
