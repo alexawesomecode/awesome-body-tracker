@@ -51,7 +51,7 @@
     "eslint-plugin-react-hooks": "^2.5.1",
     "jest": "^26.1.0",
     "json-loader": "^0.5.7",
-    "stylelint": "^13.3.3",
+    "stylelint": "^15.10.1",
     "stylelint-config-standard": "^20.0.0",
     "stylelint-scss": "^3.17.2"
   }
